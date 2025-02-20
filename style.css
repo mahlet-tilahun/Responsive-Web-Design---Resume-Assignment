@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+#navbar {
+  background: #5569dc;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  display: flex;
+  text-align: center;
+  justify-content: left;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+}
+
+.menu-toggle {
+  display: none; /* Initially hidden on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  background-color: white;
+  height: 4px;
+  width: 30px;
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show burger menu on mobile */
+  }
+  .nav-list {
+    display: none; /* Hide nav links initially */
+    flex-direction: column;
+    background: #5569dc;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  .nav-list.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .nav-list li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #welcome-section {
+    flex-direction: column-reverse;
+  }
+
+  #about-me {
+    flex-direction: column;
+  }
+}
+
+#welcome-section {
+  display: flex;
+  background-image: url(./images/bg-img.JPG);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 250px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#profile-picture {
+  width: 300px;
+  height: 300px;
+}
+
+h1 {
+  font-size: 24px;
+  color: white;
+  font-family: "Trebuchet MS", "Arial", "Verdana", sans-serif;
+}
+
+#profile-name {
+  font-size: 88px;
+  color: white;
+  font-family: "Georgia", "Palatino Linotype", "Times New Roman", serif;
+  font-weight: bold;
+}
+
+#welcome-text p {
+  font-size: 21px;
+  color: white;
+  font-family: "Trebuchet MS", "Arial", "Verdana", sans-serif;
+  font-weight: lighter;
+}
+
+/* Project Section (Updated) */
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-tile {
+  display: flex; /* Make project tiles flex */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.project-tile img {
+  max-width: 100%;
+  height: auto;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+}
+
+.about-me-title {
+  margin-right: 60px;
+  display: flex;
+}
+
+.about-me-description {
+  display: flex;
+}

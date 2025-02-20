@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahlet's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <header id="welcome-section">
+        <div id="welcome-text">
+            <h1>Hello, I'm <br><span id="profile-name">Mahlet Tilahun</span></h1>
+            <p>Front-end web developer | Tech enthusiast</p>
+        </div>
+        <div id="image-container"><img src="./images/profile-pic.PNG" alt="profile picture" id="profile-picture">
+        </div>
+    </header>
+
+
+    <section id="about-me">
+        <h2 class="about-me-title">About me</h2>
+        <p class="about-me-description">Hi, I'm Mahlet Tilahun, a passionate front-end web developer and tech
+            enthusiast. As a student, I'm
+            constantly exploring
+            new technologies and refining my skills to build user-friendly, modern web experiences. I love solving
+            problems through
+            code and bringing creative ideas to life. When I'm not coding, you’ll find me learning about the latest
+            trends in tech
+            and innovation.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2><br>
+        <div class="project-tile">
+            <img src="https://via.placeholder.com/150" alt="project image">
+            <h3>Project 1</h3>
+            <p>Project description</p>
+        </div>
+        <div class="project-tile">
+            <img src="https://via.placeholder.com/150" alt="project image">
+            <h3>Project 2</h3>
+            <p>Project description</p>
+        </div>
+        <div class="project-tile">
+            <img src="https://via.placeholder.com/150" alt="project image">
+            <h3>Project 3</h3>
+            <p>Project description</p>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+            <button type="submit">Send</button>
+        </form>
+        <footer>
+            <p>&copy; 2025 Mahlet Tilahun | All Rights Reserved</p>
+        </footer>
+        <script src="script.js"></script>
+    </section>
+
+</body>
+
+</html>

@@ -117,22 +117,21 @@ h1 {
 #projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 100px;
-  min-height: 80vh;
+  margin-top: 20px;
 }
 
-.project-tile {
-  display: flex; /* Make project tiles flex */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center;
+.project-title {
+  width: 300px;
+  font-size: 24px;
+  color: #5569dc;
   text-align: center;
-  margin: 20px;
+  align-self: center;
 }
-
-.project-tile img {
-  max-width: 100%;
-  height: auto;
+.project-tile {
+  width: 250px;
+  padding: 90px 20px;
+  margin: 10px;
+  line-height: 25px;
 }
 
 #about-me {
@@ -140,22 +139,24 @@ h1 {
   background-color: #eef0fb;
   min-height: 70vh;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .about-me-title {
-  padding-left: 30px;
-  padding-right: 40px;
-  text-align: left;
+  flex: 1;
+  width: 300px;
   font-size: 24px;
   color: #5569dc;
-  font-weight: lighter;
+  text-align: center;
+  align-self: center;
 }
 
 .about-me-description {
-  padding-right: 40px;
-  font-weight: lighter;
-  line-height: 30px;
-  width: 50%;
+  flex: 3;
+  width: 250px;
+  padding: 90px 20px;
+  margin: 10px;
+  line-height: 25px;
 }
 
 /* Contact Section */

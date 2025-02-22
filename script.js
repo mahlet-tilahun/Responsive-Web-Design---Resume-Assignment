@@ -1,18 +1,10 @@
 // Get elements
 const mobileMenu = document.getElementById("mobile-menu");
 const navList = document.querySelector(".nav-list");
-const navLinks = document.querySelectorAll(".nav-list a"); // Select all nav links
 
 // Toggle the nav list visibility on mobile
 mobileMenu.addEventListener("click", () => {
   navList.classList.toggle("active");
-});
-
-// Close the menu when a link is clicked
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navList.classList.remove("active"); // Hide menu after clicking a link
-  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -55,4 +47,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-

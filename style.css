@@ -6,6 +6,7 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Navbar */
 #navbar {
   background: #5569dc;
   padding: 15px;
@@ -30,7 +31,7 @@ body {
 }
 
 .menu-toggle {
-  display: none; /* Initially hidden on larger screens */
+  display: none;
   flex-direction: column;
   cursor: pointer;
 }
@@ -42,39 +43,7 @@ body {
   margin: 5px 0;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: flex; /* Show burger menu on mobile */
-  }
-  .nav-list {
-    display: none; /* Hide nav links initially */
-    flex-direction: column;
-    background: #5569dc;
-    width: 100%;
-    position: absolute;
-    top: 50px;
-    left: 0;
-  }
-
-  .nav-list.active {
-    display: flex; /* Show menu when active */
-  }
-
-  .nav-list li {
-    text-align: center;
-    padding: 10px;
-  }
-
-  #welcome-section {
-    flex-direction: column-reverse;
-  }
-
-  #about-me {
-    flex-direction: column;
-  }
-}
-
+/* Welcome Section */
 #welcome-section {
   display: flex;
   background-image: url(./images/bg-img.JPG);
@@ -84,6 +53,8 @@ body {
   padding-top: 250px;
   justify-content: space-around;
   width: 100%;
+  min-height: 100vh;
+  text-align: center;
 }
 
 #profile-picture {
@@ -92,32 +63,33 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: clamp(24px, 3vw, 32px);
   color: white;
   font-family: "Trebuchet MS", "Arial", "Verdana", sans-serif;
   padding-left: 30px;
 }
 
 #profile-name {
-  font-size: 88px;
+  font-size: clamp(60px, 7vw, 88px);
   color: white;
   font-family: "Georgia", "Palatino Linotype", "Times New Roman", serif;
   font-weight: bold;
 }
 
 #welcome-text p {
-  font-size: 21px;
+  font-size: clamp(18px, 2.5vw, 21px);
   color: white;
   font-family: "Trebuchet MS", "Arial", "Verdana", sans-serif;
   font-weight: lighter;
   padding-left: 30px;
 }
 
-/* Project Section (Updated) */
+/* Projects Section */
 #projects {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  min-height: 70vh;
 }
 
 .project-title {
@@ -127,6 +99,7 @@ h1 {
   text-align: center;
   align-self: center;
 }
+
 .project-tile {
   width: 250px;
   padding: 90px 20px;
@@ -134,38 +107,44 @@ h1 {
   line-height: 25px;
 }
 
+/* About Me */
 #about-me {
   display: flex;
+  flex-wrap: wrap;
   background-color: #eef0fb;
   min-height: 70vh;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 30px;
 }
 
 .about-me-title {
-  flex: 1;
-  width: 300px;
   font-size: 24px;
   color: #5569dc;
   text-align: center;
-  align-self: center;
 }
 
 .about-me-description {
-  flex: 3;
-  width: 250px;
-  padding: 90px 20px;
-  margin: 10px;
-  line-height: 25px;
+  flex: 2;
+  max-width: 600px;
+  font-size: clamp(18px, 2.5vw, 21px);
+  padding: 20px;
+  line-height: 1.6;
 }
 
 /* Contact Section */
 #contact {
   text-align: center;
-  padding: 50px 20px;
+  padding: 70px 20px;
   background-color: #ffffff;
+  margin-top: 20px;
+  min-height: 70vh;
 }
 
+#contact h2 {
+  color: #5569dc;
+}
 #contact form {
   display: flex;
   flex-direction: column;
@@ -187,6 +166,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  resize: none;
 }
 
 #contact button {
@@ -212,4 +192,71 @@ footer {
   color: white;
   padding: 20px;
   font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: #5569dc;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #welcome-section {
+    flex-direction: column-reverse;
+    padding-top: 150px;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+  #welcome-text h1 {
+    font-size: clamp(24px, 3vw, 32px);
+  }
+  #profile-name {
+    font-size: clamp(40px, 5vw, 60px);
+  }
+
+  #welcome-text p {
+    font-size: clamp(16px, 2.5vw, 18px);
+  }
+
+  #profile-picture {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  /* Responsive About Me */
+  #about-me {
+    flex-direction: column;
+  }
+
+  .about-me-title {
+    font-size: clamp(15px, 3vw, 15px);
+    justify-content: center;
+    text-align: left;
+  }
+  .about-me-description {
+    width: 90%;
+    font-size: clamp(15px, 3vw, 15px);
+  }
 }

@@ -17,8 +17,8 @@
         </div>
         <ul class="nav-list">
             <li><a href="#welcome-section">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#about-me">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -27,7 +27,7 @@
     <header id="welcome-section">
         <div id="welcome-text">
             <h1>Hello, I'm <br><span id="profile-name">Mahlet Tilahun</span></h1>
-            <p>Front-end web developer | Tech enthusiast</p>
+            <p>Software-engineering student | Tech enthusiast</p>
         </div>
         <div id="image-container"><img src="./images/profile-pic.PNG" alt="profile picture" id="profile-picture">
         </div>
@@ -39,17 +39,18 @@
             <h2>About me</h2>
         </div>
         <div class="about-me-description">
-            <p>Hi, I'm Mahlet Tilahun, a passionate software engineering student and tech
+            <p>I'm <b>Mahlet Tilahun</b>, a passionate software engineering student and tech
                 enthusiast. As a student, I'm
                 constantly exploring
                 new technologies and refining my skills to build user-friendly, modern web experiences. I love solving
                 problems through
                 code and bringing creative ideas to life. When I'm not coding, you’ll find me learning about the latest
                 trends in tech
-                and innovation. <br>
-                Education: Bachelor of Science in Software Engineering
-                African Leadership University | 2024 – 2027 <br>
-                Programming Languages: HTML, CSS, Javascript, Python
+                and innovation. <br><br>
+                <b>Education:</b> BSc. (Hons) Software Engineering,
+                African Leadership University | 2024 – 2027 <br><br>
+                <b>Skills:</b> Web development, Data analysis, Linux, Shell scripting, Database management <br><br>
+                <b>Programming Languages:</b> HTML, CSS, Javascript, Python
             </p>
         </div>
     </section>
@@ -83,19 +84,29 @@
 
 
     <section id="contact">
-        <h2>Contact</h2>
-        <form action="#">
+        <h2>Contact me</h2>
+        <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br>
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea><br>
+
             <button type="submit">Send</button>
         </form>
+        <p>Connect with me:
+            <a href="https://github.com/mahlet-tilahun" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/mahlet-tilahun/" target="_blank">LinkedIn</a> |
+            <a href="mailto:m.tilahun@alustudent.com">Gmail</a>
+        </p>
+
         <footer>
             <p>&copy; 2025 Mahlet Tilahun | All Rights Reserved</p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="script.js"></script>
     </section>
 

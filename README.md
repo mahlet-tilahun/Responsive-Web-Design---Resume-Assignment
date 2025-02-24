@@ -16,7 +16,7 @@ This is a responsive personal portfolio website showcasing my projects, skills, 
 - **CSS** for styling and responsiveness
 - **JavaScript** for interactivity and form validation
 
-Use this link to launch the website: /
+Use this link to launch the website: \
 https://mahlet-tilahun.github.io/Responsive-Web-Design---Resume-Assignment/
 
 
